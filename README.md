@@ -52,7 +52,9 @@ python classification.py
 
 
 
-mj1
+
+
+MJ1
 
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -146,7 +148,8 @@ mj1
 </project>
 
 
-mj11
+MJ11
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -284,8 +287,8 @@ mj11
 </project>
 
 
-HotelReser
 HotelReservationManagementSystem
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -354,7 +357,8 @@ HotelReservationManagementSystem
 </project>
 
 
-Web
+WEB
+
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
@@ -384,7 +388,8 @@ Web
 </project>
 
 
-Web111
+WEB111
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -459,6 +464,8 @@ Web111
   </build>
 </project>
 
+
+
 FROM eclipse-temurin:21-jdk
 
 COPY target/*.jar app.jar
@@ -467,3 +474,5 @@ ENTRYPOINT ["java", "-jar", "app.jar"]
 
 FROM tomcat:9.0
 COPY target/my-web-app.war /usr/local/tomcat/webapps/my-web-app.war
+
+
