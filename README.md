@@ -151,3 +151,45 @@ COPY app.py /app/
 RUN pip install flask                     //docker compose up --build
 
 CMD ["python", "app.py"]
+
+
+
+
+
+
+
+docker compose up --build -d
+
+docker ps
+
+docker compose ps
+
+docker build -t flask-docker-app .
+
+docker images
+
+docker compose down
+
+docker run -d -p 5000:5000 --name flask-container flask-docker-app
+
+docker ps
+
+docker stop flask-container
+
+docker rm flask-container
+
+docker login
+
+docker tag flask-docker-app YOUR_USERNAME/flask-docker-app:latest
+
+docker images
+
+docker push YOUR_USERNAME/flask-docker-app:latest
+
+docker login
+
+docker pull YOUR_USERNAME/flask-docker-app:latest
+
+docker run -d -p 5000:5000 --name flask-container YOUR_USERNAME/flask-docker-app:latest
+
+docker ps
