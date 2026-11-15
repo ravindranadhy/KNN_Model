@@ -118,3 +118,36 @@ SELECT * FROM students;
 
 # 15. Check containers
 docker ps
+
+
+
+
+
+
+
+
+
+Own Image    app.py
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Hello from Flask + Docker hello!"
+
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000)
+
+
+
+Dockerfile
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY app.py /app/
+
+RUN pip install flask                     //docker compose up --build
+
+CMD ["python", "app.py"]
